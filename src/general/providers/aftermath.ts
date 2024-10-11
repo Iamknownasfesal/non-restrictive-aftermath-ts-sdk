@@ -15,13 +15,7 @@ import { Helpers } from "../utils/helpers";
 import { Casting } from "../utils/casting";
 import { Caller } from "../utils/caller";
 import { Prices } from "../prices/prices";
-import {
-	LeveragedStaking,
-	NftAmm,
-	ReferralVault,
-	Router,
-	Sui,
-} from "../../packages";
+import { NftAmm, ReferralVault, Router, Sui } from "../../packages";
 import { HistoricalData } from "../historicalData/historicalData";
 import { Perpetuals } from "../../packages/perpetuals";
 import { Oracle } from "../../packages/oracle/oracle";
@@ -122,7 +116,6 @@ export class Aftermath extends Caller {
 	 * @returns A new instance of the Staking class.
 	 */
 	public Staking = () => new Staking(this.network, this.Provider);
-	public LeveragedStaking = () => new LeveragedStaking(this.network);
 	public SuiFrens = () => new SuiFrens(this.network, this.Provider);
 	public Faucet = () => new Faucet(this.network, this.Provider);
 	/**

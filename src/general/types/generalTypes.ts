@@ -3,11 +3,6 @@ import {
 	EventId,
 	SuiTransactionBlockResponse,
 } from "@mysten/sui/client";
-import {
-	Scallop,
-	ScallopBuilder,
-	ScallopQuery,
-} from "@scallop-io/sui-scallop-sdk";
 
 // =========================================================================
 //  bigint
@@ -188,14 +183,4 @@ export interface IndexerResponse<DataType> {
 export interface IndexerDataWithCursorQueryParams {
 	skip: number;
 	limit: number;
-}
-
-// =========================================================================
-//  Scallop
-// =========================================================================
-
-export interface ScallopProviders {
-	Main: Scallop;
-	Builder: ScallopBuilder;
-	Query: ScallopQuery;
 }

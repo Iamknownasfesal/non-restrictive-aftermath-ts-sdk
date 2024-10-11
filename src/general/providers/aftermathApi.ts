@@ -20,10 +20,7 @@ import {
 	ModuleName,
 	MoveErrorCode,
 	ObjectId,
-	RouterProtocolName,
-	ScallopProviders,
 	UniqueId,
-	Url,
 } from "../../types";
 import { HistoricalDataApi } from "../historicalData/historicalDataApi";
 import { CoinGeckoPricesApi } from "../prices/coingecko/coinGeckoPricesApi";
@@ -37,7 +34,6 @@ import { Helpers, IndexerCaller } from "../utils";
 import { SuiClient } from "@mysten/sui/client";
 import { DcaApi } from "../../packages/dca/api/dcaApi";
 import { DynamicGasApi } from "../dynamicGas/dynamicGasApi";
-import { LeveragedStakingApi } from "../../packages/leveragedStaking/api/leveragedStakingApi";
 import { NftsApi } from "../nfts/nftsApi";
 import { MoveErrorsInterface } from "../types/moveErrorsInterface";
 import { RouterPricesApi } from "../prices/router/routerPricesApi";
@@ -182,9 +178,6 @@ export class AftermathApi {
 	 * @returns A new instance of the RouterApi class.
 	 */
 	public Router = () => new RouterApi(this);
-
-	public LeveragedStaking = (ScallopProviders?: ScallopProviders) =>
-		new LeveragedStakingApi(this, ScallopProviders);
 
 	// =========================================================================
 	//  Helpers
